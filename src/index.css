@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather:wght@300&display=swap');
 
 body {
-	background: #185a9d; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left bottom, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right bottom, #43cea2, #185a9d);
 	background-attachment: fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	color: #354538;
+	color: #354548;
+	font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-image: linear-gradient(to right bottom, #43cea2, #185a9d);
 }
 
 a {
@@ -44,9 +51,10 @@ a:hover {
 
 .sidebar_avatar {
 	height: 110px;
-	width: 120px;
+	width: 100px;
 	object-fit: contain;
 	border-radius: 30px;
+	margin: auto;
 }
 
 .sidebar_icon {
@@ -165,8 +173,8 @@ a:hover {
 }
 
 .about_intro {
-	font-size: 1.1rem;
-	padding: 20px;
+	font-size: 1.0rem;
+	padding: 20px 28px;
 	margin: 10px 0;
 }
 
@@ -218,13 +226,15 @@ a:hover {
 	padding-top: 20px;
 }
 
-.resume-card-heading {
+.resume-card-heading,
+.resume-language-heading {
 	margin-left: 10px;
 	margin-bottom: 20px;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: 700;
 	color: #354358;
 	border-right: 4px solid #185a9d;
+	border-radius: 15px;
 }
 
 .resume-card-body {
@@ -264,4 +274,80 @@ a:hover {
 	padding: 4px 14px;
 	color: #fff;
 	font-size: 0.9rem;
+}
+
+/* projects */
+
+.projects {
+	height: 70vh;
+	padding-top: 30px;
+	overflow-y: auto;
+}
+
+.projectCard-wrapper {
+	margin: 10px 0;
+	width: 100%;
+	height: 100%;
+	min-height: 160px;
+}
+
+.projectCard-image {
+	width: 100%;
+	height: 70%;
+	border-radius: 30px;
+	border: 1px solid #185a9d;
+	transition: transform 0.1s linear;
+}
+
+.projectCard-image:hover {
+	transform: scale(1.05);
+}
+
+.projectCard-icon {
+	width: 25px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.projectCard-title {
+	margin-top: 12px;
+	font: size 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.projects-navbar {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.projects-navbar > div {
+	margin: 5px 15px 10px 15px;
+	font-size: 20px;
+	cursor: pointer;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.projects-navbar > div:hover {
+	color: #43cea2;
+}
+
+.projects-navbar-active {
+	color: #43cea2;
+}
+
+@media (max-width: 600px) {
+	.app_main-content {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.navbar_active {
+		font-size: 1.5rem;
+	}
+
+	.navbar_item {
+		font-size: 1rem;
+	}
 }

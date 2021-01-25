@@ -1,56 +1,34 @@
 import React from 'react'
-import react from '../assets/icons/react.svg'
 import Bar from './Bar'
-import html from '../assets/icons/html.svg'
-import css from '../assets/icons/css.svg'
-import js from '../assets/icons/js.svg'
-import ang from '../assets/icons/angular.svg'
-import api from '../assets/icons/api.svg'
+import {motion} from 'framer-motion'
+import languages from './data/resume_data'
 
-interface languages {
-  icon: string,
-  name: string,
-  level: number
+const resumeVariant = {
+hidden:{
+  opacity: 0
+},
+visible: {
+  opacity: 1,
+  transition: {
+    delay: 0.2, duration: 0.6
+  }
+},
+exit: {
+  opacity: 0,
+  transition: {
+    ease: 'easeInOut'
+  }
 }
-
-const languages = [
-  {
-    icon: html,
-    name:'HTML',
-    level:'80'
-  },
-  {
-    icon: css,
-    name:'CSS',
-    level:'70'
-  },
-  {
-    icon: js,
-    name:'JavaScript',
-    level:'50'
-  },
-  {
-    icon: ang,
-    name:'Angular',
-    level:'40'
-  },
-  {
-    icon: react,
-    name:'React',
-    level:'40'
-  },
-  {
-    icon: api,
-    name:'API',
-    level:'50'
-  },
-]
-
-
+}
 
 const Resume = () => {
   return (
-    <div className="container resume">
+    <motion.div className="container resume"
+    variants={resumeVariant}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    >
       <div className="row">
         <div className="col-lg-6 resume-card">
           <h4 className="resume-card-heading">
@@ -95,7 +73,7 @@ const Resume = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

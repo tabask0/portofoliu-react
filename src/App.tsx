@@ -2,14 +2,18 @@ import React from 'react';
 import './App.css';
 import Sidebar, {} from './components/Sidebar'
 import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
+import { Redirect, Route, Switch, useLocation} from 'react-router-dom';
 import  About  from './components/About';
 import  Resume  from './components/Resume';
 import  Projects  from './components/Projects';
+import {AnimatePresence} from 'framer-motion'
+
 
 function App() {
+  const location = useLocation()
+
   return (
-    <Router>
+  
     <div className="App">
       <div className="container app_container">
         <div className="row app_row">
@@ -18,7 +22,8 @@ function App() {
         </div>
       <div className="col-lg-9 app_main-content">
           <Navbar/>
-          <Switch>
+          <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.key}>
           <Route exact path ="/">
             <About/>
           </Route>
@@ -30,11 +35,12 @@ function App() {
             <Redirect to="/" />
           </Route>
           </Switch>
+          </AnimatePresence>
      </div>
       </div>
     </div>
     </div>
-  </Router>);
+);
 }
 
 export default App;

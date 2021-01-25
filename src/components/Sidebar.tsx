@@ -5,7 +5,7 @@ import pin from '../assets/icons/pin.svg';
 import tie from '../assets/icons/tie.svg';
 import email from '../assets/icons/email.svg'
 import avatar from '../assets/projects_images/0.jpg'
-
+import {motion} from 'framer-motion'
 
 
 
@@ -14,8 +14,24 @@ const Sidebar = () => {
     window.open("mailto:bucur37@gmail.com")
   }
 
+  const sidebarVariant = {
+    hidden: {
+      x: '-20vh'
+    },
+    visible: {
+      x: 0,
+      transition: {
+        delay: 0.1, duration: 0.5, type: 'spring'
+      }
+    }
+  }
+
   return (
-    <div className="sidebar">
+    <motion.div className="sidebar"
+    variants={sidebarVariant}
+    initial='hidden'
+    animate='visible'
+    >
       <img src={avatar} alt="avatar" className="sidebar_image"/>
       <div className="sidebar_name">Andrei <span>Bucur</span></div>
       <div className="sidebar_item sidebar_title"><span>Frontend</span> Developer</div>
@@ -37,7 +53,7 @@ const Sidebar = () => {
         <div className="sidebar_item"><img src={email} alt="email" className="sidebar_icon mr-3 mb-2"/>bucur37@gmail.com</div>
     </div>
     <div className="sidebar_item sidebar_email" onClick={handleEmailMe}>Contact me!</div>
-    </div>
+    </motion.div>
   )
 }
 
