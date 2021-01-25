@@ -9,6 +9,7 @@ import {motion} from 'framer-motion'
 
 
 
+
 const Sidebar = () => {
   const handleEmailMe = () => {
     window.open("mailto:bucur37@gmail.com")
@@ -35,9 +36,9 @@ const Sidebar = () => {
       <img src={avatar} alt="avatar" className="sidebar_image"/>
       <div className="sidebar_name">Andrei <span>Bucur</span></div>
       <div className="sidebar_item sidebar_title"><span>Frontend</span> Developer</div>
-      <a href={require('../assets/projects_images/resume.pdf')} download="resume.pdf">
+      <a href="https://codiver.ro/CV_Andrei_Bucur_en.pdf" download>
         <div className="sidebar_item sidebar_resume">
-          <img src={tie} alt="resume" className="sidebar_icon"/>Resume
+          <img src={tie} alt="resume" className="sidebar_icon"/>Download Resume
         </div>
       </a>
       <div className="sidebar_contact">
