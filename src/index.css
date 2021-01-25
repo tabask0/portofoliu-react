@@ -211,3 +211,57 @@ a:hover {
 	font-size: 0.9rem;
 	color: #6e7e91;
 }
+
+/* resume */
+
+.resume {
+	padding-top: 20px;
+}
+
+.resume-card-heading {
+	margin-left: 10px;
+	margin-bottom: 20px;
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #354358;
+	border-right: 4px solid #185a9d;
+}
+
+.resume-card-body {
+	margin-top: 10px;
+}
+
+.resume-card-title {
+	font-weight: 700;
+}
+
+.resume-card-name {
+	font-size: 16px;
+}
+
+.resume-card-details {
+	font-size: 0.9rem;
+	padding-top: 5px;
+}
+
+/* bar */
+.bar {
+	width: 90%;
+	background-color: #f1f2f3;
+	border-radius: 20px;
+	margin: 20px 12px;
+}
+
+.bar-icon {
+	width: 15px;
+	height: 15px;
+	color: #000;
+}
+
+.bar-wrapper {
+	background-image: linear-gradient(90deg, #43cea2, #185a9d);
+	border-radius: 20px;
+	padding: 4px 14px;
+	color: #fff;
+	font-size: 0.9rem;
+}
