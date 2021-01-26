@@ -47,7 +47,7 @@ const data_projects = [
     {
         name: 'Portfolio',
         image: portfolio,
-        deployed_url: '#',
+        deployed_url: 'https://tabask0.github.io/codiver/',
         github_url: 'https://github.com/tabask0/codiver.ro',
         category: ['html-css-js']
     },
@@ -61,7 +61,7 @@ const data_projects = [
     {
         name: 'Weather App',
         image: weather,
-        deployed_url: 'https://codiver.ro/WeatherApp/',
+        deployed_url: 'https://tabask0.github.io/codiver/WeatherApp/',
         github_url: 'https://github.com/tabask0/weather-app',
         category: ['html-css-js']
     },

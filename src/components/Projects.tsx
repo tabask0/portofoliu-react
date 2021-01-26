@@ -33,7 +33,7 @@ const Projects = () => {
             <div className="projects-navbar">
                 <div onClick={() => setProjects(data_projects)}>All</div>
                 <div onClick={() => handleFilterCategory('framework')}>Frameworks</div>
-                <div onClick={() => handleFilterCategory('html-css-js')}>Html-Css-Js</div>
+                <div onClick={() => handleFilterCategory('html-css-js')}>HTML-CSS-JS</div>
                 <div onClick={() => handleFilterCategory('wordpress')}>Wordpress</div>
             </div>
             <div className="row">
