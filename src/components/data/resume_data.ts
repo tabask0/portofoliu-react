@@ -14,12 +14,12 @@ const languages = [
   {
     icon: css,
     name:'CSS',
-    level:'70'
+    level:'80'
   },
   {
     icon: js,
     name:'JavaScript',
-    level:'50'
+    level:'60'
   },
   {
     icon: ang,
@@ -29,12 +29,12 @@ const languages = [
   {
     icon: react,
     name:'React',
-    level:'40'
+    level:'55'
   },
   {
     icon: api,
     name:'API',
-    level:'50'
+    level:'80'
   },
 ]
 

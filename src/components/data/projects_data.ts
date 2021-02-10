@@ -7,6 +7,7 @@ import tictac from '../../assets/projects_images/tictac.jpg'
 import todo from '../../assets/projects_images/todo.jpg'
 import weather from '../../assets/projects_images/weather.jpg'
 import wordpress from '../../assets/projects_images/wordpress.jpg'
+import crypto from '../../assets/projects_images/crypto.jpg'
 
 const data_projects = [
     {
@@ -14,6 +15,13 @@ const data_projects = [
         image: angular,
         deployed_url: 'https://stackblitz.com/edit/angular-ivy-y4rgap',
         github_url: 'https://github.com/tabask0/aplicati',
+        category: ['framework']
+    },
+    {
+        name: 'Crypto API React',
+        image: crypto,
+        deployed_url: 'https://cryptoapi-55c7d.web.app/',
+        github_url: 'https://github.com/tabask0/react-crypto-api',
         category: ['framework']
     },
     {
